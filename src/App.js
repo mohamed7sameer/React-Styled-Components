@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+// import './App.css';
+import Alink from "./StyledComponents/Alink";
+import Button from "./StyledComponents/Button";
+import Container from "./StyledComponents/Container";
+import Flex from "./StyledComponents/Flex";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Container as="section">
+        <h1>hello</h1>
+        <Flex>
+          <Button>Click Me</Button>
+          {/* <Button className='sm error'>Click Me</Button>
+          <Button className='lg secondary'>Click Me</Button> */}
+          <Button dataSize="sm" dataType="error" >Click Me</Button>
+          <Button dataSize="lg" dataType="secondary" >Click Me</Button>
+          <Alink href="http://google.com">Google</Alink>
+        </Flex>
+      </Container>
     </div>
   );
 }
